@@ -5,6 +5,22 @@
     <link>https://xavier38.github.io/moka</link>
     <language>fr</language>
     <item>
+      <title>Moka 1.0.8</title>
+      <pubDate>Sun, 25 Oct 2026 10:52:51 +0100</pubDate>
+      <sparkle:version>202610251052</sparkle:version>
+      <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink xml:lang="fr">https://xavier38.github.io/moka/notes/1.0.8.fr.html</sparkle:releaseNotesLink>
+      <sparkle:releaseNotesLink>https://xavier38.github.io/moka/notes/1.0.8.en.html</sparkle:releaseNotesLink>
+      <sparkle:releaseNotesLink xml:lang="es">https://xavier38.github.io/moka/notes/1.0.8.es.html</sparkle:releaseNotesLink>
+      <sparkle:releaseNotesLink xml:lang="pt">https://xavier38.github.io/moka/notes/1.0.8.pt.html</sparkle:releaseNotesLink>
+      <sparkle:releaseNotesLink xml:lang="nl">https://xavier38.github.io/moka/notes/1.0.8.nl.html</sparkle:releaseNotesLink>
+      <sparkle:releaseNotesLink xml:lang="de">https://xavier38.github.io/moka/notes/1.0.8.de.html</sparkle:releaseNotesLink>
+      <sparkle:releaseNotesLink xml:lang="it">https://xavier38.github.io/moka/notes/1.0.8.it.html</sparkle:releaseNotesLink>
+      <enclosure url="https://github.com/xavier38/moka/releases/download/v1.0.8/Moka.zip"
+                 type="application/octet-stream" sparkle:edSignature="T2pQ2WOeVvkhRUy3VygI5Wl1OjWJmkZuS7WLIDLp6ybb7+UsVPY6er8RBhi08LO0LxnYeIIxiHPZ3pNwyktyAA==" length="3423268"/>
+    </item>
+    <item>
       <title>Moka 1.0.7</title>
       <pubDate>Sat, 24 Oct 2026 19:10:15 +0200</pubDate>
       <sparkle:version>202610241909</sparkle:version>
