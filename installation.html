@@ -51,16 +51,16 @@
     <div class="langs" id="langs" aria-label="Langue"></div>
   </nav>
   <h1 id="title">Installer Moka</h1>
-  <p class="intro" id="intro">Sept étapes pour installer Moka sur votre Mac. Les captures montrent macOS en français.</p>
+  <p class="intro" id="intro">Sept étapes illustrées pour installer Moka sur votre Mac.</p>
   <ol class="steps" id="steps"></ol>
   <aside class="note"><p id="skip"></p><p id="update"></p><p id="variation"></p></aside>
 </main>
-<dialog id="zoom" aria-label="Capture agrandie"><button type="button" class="close" id="close">Fermer</button><img id="large" alt=""></dialog>
+<dialog id="zoom" aria-label="Illustration agrandie"><button type="button" class="close" id="close">Fermer</button><img id="large" alt=""></dialog>
+<script src="installation-illustrations.js"></script>
 <script>
 const downloadURL = "https://github.com/xavier38/moka/releases/latest/download/Moka.zip";
-const images = [null,"etape-2-ouvrir.png","etape-3-applications.png","etape-4-alerte.png","etape-5-reglages.png","etape-6-confirmer.png","etape-7-pret.png"];
 const T = {
-  fr: { title:"Installer Moka", intro:"Sept étapes pour installer Moka sur votre Mac. Les captures montrent macOS en français.", download:"Télécharger Moka — Gratuit", skip:"Si Moka s’ouvre normalement, passez directement à l’étape 7 : l’autorisation des étapes 4 à 6 n’est nécessaire que si macOS la demande.", update:"Pour les prochaines versions, Moka vous proposera lui-même les mises à jour. Le bouton de téléchargement donne toujours la dernière version.", variation:"Le texte exact des fenêtres peut varier selon votre version de macOS.", close:"Fermer", zoom:"Agrandir la capture", steps:[
+  fr: { title:"Installer Moka", intro:"Sept étapes illustrées pour installer Moka sur votre Mac.", download:"Télécharger Moka — Gratuit", skip:"Si Moka s’ouvre normalement, passez directement à l’étape 7 : l’autorisation des étapes 4 à 6 n’est nécessaire que si macOS la demande.", update:"Pour les prochaines versions, Moka vous proposera lui-même les mises à jour. Le bouton de téléchargement donne toujours la dernière version.", variation:"Le texte exact des fenêtres peut varier selon votre version de macOS.", close:"Fermer", zoom:"Agrandir l’illustration", steps:[
     ["Téléchargez Moka","Utilisez le bouton ci-dessous. Le fichier Moka.zip arrive dans le dossier Téléchargements."],
     ["Ouvrez le fichier","Dans le Finder, ouvrez Téléchargements, puis double-cliquez sur Moka.zip. L’app Moka apparaît à côté."],
     ["Placez Moka dans Applications","Faites glisser Moka vers le dossier Applications dans la barre latérale du Finder. Ouvrez ensuite Applications et double-cliquez sur Moka."],
@@ -69,7 +69,7 @@ const T = {
     ["Confirmez","Cliquez de nouveau sur « Ouvrir quand même », puis validez avec le mot de passe de votre Mac ou Touch ID."],
     ["C’est prêt !","La tasse apparaît dans la barre des menus. Un clic garde le Mac allumé ; un double-clic ouvre Moka. Vous pouvez aussi ajouter le widget Moka au bureau."]
   ]},
-  en: { title:"Install Moka", intro:"Seven steps to install Moka on your Mac. The screenshots show macOS in French.", download:"Download Moka — Free", skip:"If Moka opens normally, go straight to step 7. Steps 4 to 6 are only needed if macOS asks for approval.", update:"Moka will offer future updates automatically. The download button always gets the latest version.", variation:"The exact wording of macOS dialogs may vary with your version.", close:"Close", zoom:"Enlarge screenshot", steps:[
+  en: { title:"Install Moka", intro:"Seven illustrated steps to install Moka on your Mac.", download:"Download Moka — Free", skip:"If Moka opens normally, go straight to step 7. Steps 4 to 6 are only needed if macOS asks for approval.", update:"Moka will offer future updates automatically. The download button always gets the latest version.", variation:"The exact wording of macOS dialogs may vary with your version.", close:"Close", zoom:"Enlarge illustration", steps:[
     ["Download Moka","Use the button below. Moka.zip will arrive in your Downloads folder."],
     ["Open the file","In Finder, open Downloads and double-click Moka.zip. The Moka app appears beside it."],
     ["Move Moka to Applications","Drag Moka to the Applications folder in the Finder sidebar. Then open Applications and double-click Moka."],
@@ -78,7 +78,7 @@ const T = {
     ["Confirm","Click “Open Anyway” once more, then use your Mac password or Touch ID."],
     ["You’re ready!","The cup appears in the menu bar. Click it to keep your Mac awake; double-click to open Moka. You can also add the Moka widget to your desktop."]
   ]},
-  es: { title:"Instalar Moka", intro:"Siete pasos para instalar Moka en su Mac. Las capturas muestran macOS en francés.", download:"Descargar Moka — Gratis", skip:"Si Moka se abre normalmente, vaya directamente al paso 7. Los pasos 4 a 6 solo son necesarios si macOS pide autorización.", update:"Moka le ofrecerá las futuras actualizaciones automáticamente. El botón de descarga siempre obtiene la última versión.", variation:"El texto exacto de las ventanas puede variar según su versión de macOS.", close:"Cerrar", zoom:"Ampliar la captura", steps:[
+  es: { title:"Instalar Moka", intro:"Siete pasos ilustrados para instalar Moka en su Mac.", download:"Descargar Moka — Gratis", skip:"Si Moka se abre normalmente, vaya directamente al paso 7. Los pasos 4 a 6 solo son necesarios si macOS pide autorización.", update:"Moka le ofrecerá las futuras actualizaciones automáticamente. El botón de descarga siempre obtiene la última versión.", variation:"El texto exacto de las ventanas puede variar según su versión de macOS.", close:"Cerrar", zoom:"Ampliar la ilustración", steps:[
     ["Descargue Moka","Use el botón de abajo. Moka.zip llegará a la carpeta Descargas."],
     ["Abra el archivo","En Finder, abra Descargas y haga doble clic en Moka.zip. La app Moka aparecerá al lado."],
     ["Mueva Moka a Aplicaciones","Arrastre Moka a la carpeta Aplicaciones en la barra lateral de Finder. Después abra Aplicaciones y haga doble clic en Moka."],
@@ -87,7 +87,7 @@ const T = {
     ["Confirme","Haga clic de nuevo en «Abrir igualmente» y confirme con la contraseña del Mac o Touch ID."],
     ["¡Listo!","La taza aparece en la barra de menús. Un clic mantiene el Mac despierto; un doble clic abre Moka. También puede añadir el widget al escritorio."]
   ]},
-  pt: { title:"Instalar o Moka", intro:"Sete passos para instalar o Moka no seu Mac. As capturas mostram o macOS em francês.", download:"Baixar o Moka — Grátis", skip:"Se o Moka abrir normalmente, vá direto para a etapa 7. As etapas 4 a 6 só são necessárias se o macOS pedir autorização.", update:"O Moka oferecerá atualizações futuras automaticamente. O botão de download sempre baixa a versão mais recente.", variation:"O texto exato das janelas pode variar conforme a versão do macOS.", close:"Fechar", zoom:"Ampliar captura", steps:[
+  pt: { title:"Instalar o Moka", intro:"Sete passos ilustrados para instalar o Moka no seu Mac.", download:"Baixar o Moka — Grátis", skip:"Se o Moka abrir normalmente, vá direto para a etapa 7. As etapas 4 a 6 só são necessárias se o macOS pedir autorização.", update:"O Moka oferecerá atualizações futuras automaticamente. O botão de download sempre baixa a versão mais recente.", variation:"O texto exato das janelas pode variar conforme a versão do macOS.", close:"Fechar", zoom:"Ampliar ilustração", steps:[
     ["Baixe o Moka","Use o botão abaixo. O arquivo Moka.zip irá para a pasta Downloads."],
     ["Abra o arquivo","No Finder, abra Downloads e clique duas vezes em Moka.zip. O app Moka aparece ao lado."],
     ["Mova o Moka para Aplicativos","Arraste o Moka para a pasta Aplicativos na barra lateral do Finder. Depois abra Aplicativos e clique duas vezes no Moka."],
@@ -96,7 +96,7 @@ const T = {
     ["Confirme","Clique mais uma vez em «Abrir Mesmo Assim» e confirme com a senha do Mac ou Touch ID."],
     ["Pronto!","A xícara aparece na barra de menus. Um clique mantém o Mac acordado; dois cliques abrem o Moka. Você também pode adicionar o widget à mesa."]
   ]},
-  nl: { title:"Moka installeren", intro:"Zeven stappen om Moka op uw Mac te installeren. De schermafbeeldingen tonen macOS in het Frans.", download:"Moka downloaden — Gratis", skip:"Als Moka normaal opent, ga dan meteen naar stap 7. Stap 4 tot en met 6 zijn alleen nodig als macOS om toestemming vraagt.", update:"Moka biedt toekomstige updates automatisch aan. De downloadknop levert altijd de nieuwste versie.", variation:"De exacte tekst van macOS-vensters kan per versie verschillen.", close:"Sluiten", zoom:"Schermafbeelding vergroten", steps:[
+  nl: { title:"Moka installeren", intro:"Zeven geïllustreerde stappen om Moka op uw Mac te installeren.", download:"Moka downloaden — Gratis", skip:"Als Moka normaal opent, ga dan meteen naar stap 7. Stap 4 tot en met 6 zijn alleen nodig als macOS om toestemming vraagt.", update:"Moka biedt toekomstige updates automatisch aan. De downloadknop levert altijd de nieuwste versie.", variation:"De exacte tekst van macOS-vensters kan per versie verschillen.", close:"Sluiten", zoom:"Illustratie vergroten", steps:[
     ["Download Moka","Gebruik de knop hieronder. Moka.zip komt in de map Downloads terecht."],
     ["Open het bestand","Open Downloads in Finder en dubbelklik op Moka.zip. De Moka-app verschijnt ernaast."],
     ["Zet Moka in Apps","Sleep Moka naar de map Apps in de navigatiekolom van Finder. Open daarna Apps en dubbelklik op Moka."],
@@ -105,7 +105,7 @@ const T = {
     ["Bevestig","Klik opnieuw op ‘Toch openen’ en bevestig met uw Mac-wachtwoord of Touch ID."],
     ["Klaar!","Het kopje verschijnt in de menubalk. Eén klik houdt de Mac wakker; dubbelklikken opent Moka. U kunt ook de Moka-widget op het bureaublad zetten."]
   ]},
-  de: { title:"Moka installieren", intro:"Sieben Schritte zur Installation von Moka auf Ihrem Mac. Die Bildschirmfotos zeigen macOS auf Französisch.", download:"Moka laden — Kostenlos", skip:"Wenn Moka direkt startet, gehen Sie zu Schritt 7. Die Schritte 4 bis 6 sind nur nötig, wenn macOS eine Freigabe verlangt.", update:"Moka bietet künftige Updates automatisch an. Die Downloadtaste liefert immer die neueste Version.", variation:"Der genaue Wortlaut der macOS-Fenster kann je nach Version abweichen.", close:"Schließen", zoom:"Bildschirmfoto vergrößern", steps:[
+  de: { title:"Moka installieren", intro:"Sieben illustrierte Schritte zur Installation von Moka auf Ihrem Mac.", download:"Moka laden — Kostenlos", skip:"Wenn Moka direkt startet, gehen Sie zu Schritt 7. Die Schritte 4 bis 6 sind nur nötig, wenn macOS eine Freigabe verlangt.", update:"Moka bietet künftige Updates automatisch an. Die Downloadtaste liefert immer die neueste Version.", variation:"Der genaue Wortlaut der macOS-Fenster kann je nach Version abweichen.", close:"Schließen", zoom:"Illustration vergrößern", steps:[
     ["Moka laden","Nutzen Sie die Taste unten. Moka.zip landet im Ordner Downloads."],
     ["Datei öffnen","Öffnen Sie Downloads im Finder und doppelklicken Sie auf Moka.zip. Die Moka-App erscheint daneben."],
     ["Moka nach Programme ziehen","Ziehen Sie Moka in den Ordner Programme in der Finder-Seitenleiste. Öffnen Sie dann Programme und doppelklicken Sie auf Moka."],
@@ -114,7 +114,7 @@ const T = {
     ["Bestätigen","Klicken Sie erneut auf „Dennoch öffnen“ und bestätigen Sie mit Ihrem Mac-Passwort oder Touch ID."],
     ["Fertig!","Die Tasse erscheint in der Menüleiste. Ein Klick hält den Mac wach, ein Doppelklick öffnet Moka. Sie können das Moka-Widget auch zum Schreibtisch hinzufügen."]
   ]},
-  it: { title:"Installare Moka", intro:"Sette passaggi per installare Moka sul Mac. Le immagini mostrano macOS in francese.", download:"Scarica Moka — Gratis", skip:"Se Moka si apre normalmente, passa direttamente al passaggio 7. I passaggi 4–6 servono solo se macOS chiede l’autorizzazione.", update:"Moka proporrà automaticamente i prossimi aggiornamenti. Il pulsante di download scarica sempre l’ultima versione.", variation:"Il testo esatto delle finestre può cambiare secondo la versione di macOS.", close:"Chiudi", zoom:"Ingrandisci immagine", steps:[
+  it: { title:"Installare Moka", intro:"Sette passaggi illustrati per installare Moka sul Mac.", download:"Scarica Moka — Gratis", skip:"Se Moka si apre normalmente, passa direttamente al passaggio 7. I passaggi 4–6 servono solo se macOS chiede l’autorizzazione.", update:"Moka proporrà automaticamente i prossimi aggiornamenti. Il pulsante di download scarica sempre l’ultima versione.", variation:"Il testo esatto delle finestre può cambiare secondo la versione di macOS.", close:"Chiudi", zoom:"Ingrandisci illustrazione", steps:[
     ["Scarica Moka","Usa il pulsante qui sotto. Moka.zip arriverà nella cartella Download."],
     ["Apri il file","Nel Finder, apri Download e fai doppio clic su Moka.zip. L’app Moka appare accanto."],
     ["Sposta Moka in Applicazioni","Trascina Moka nella cartella Applicazioni nella barra laterale del Finder. Poi apri Applicazioni e fai doppio clic su Moka."],
@@ -130,6 +130,7 @@ function setLang(l) {
   const t=T[l]; document.documentElement.lang=l; document.title=t.title+" — Moka";
   for (const id of ["title","intro","skip","update","variation"]) document.getElementById(id).textContent=t[id];
   document.getElementById("close").textContent=t.close;
+  document.getElementById("zoom").setAttribute("aria-label",t.zoom);
   const list=document.getElementById("steps"); list.replaceChildren();
   t.steps.forEach(([title,body],i)=>{
     const li=document.createElement("li"); li.className="step";
@@ -140,7 +141,7 @@ function setLang(l) {
     content.append(number,heading,p);
     if (i===0) { const a=document.createElement("a"); a.className="download"; a.href=downloadURL; a.textContent=t.download; content.append(a); li.append(content); }
     else { const button=document.createElement("button"); button.type="button"; button.className="zoom-button"; button.setAttribute("aria-label",t.zoom+" : "+title);
-      const img=document.createElement("img"); img.src="installation/"+images[i]; img.alt=title; img.loading="lazy"; button.append(img);
+      const img=document.createElement("img"); img.src=illustration(i+1,l); img.alt=title; img.loading="lazy"; button.append(img);
       button.addEventListener("click",()=>{ const large=document.getElementById("large"); large.src=img.src; large.alt=title; document.getElementById("zoom").showModal(); });
       li.append(button,content); }
     list.append(li);
