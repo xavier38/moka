@@ -33,6 +33,7 @@
   @media (prefers-color-scheme:dark) { .step .download { color:#1d1916; } }
   .zoom-button { display:block; width:100%; padding:0; border:0; background:none; cursor:zoom-in; border-radius:10px; }
   .zoom-button img { display:block; width:100%; height:auto; border-radius:10px; }
+  .zoom-hint { display:block; margin-top:6px; color:var(--accent); font:600 14px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif; text-decoration:underline; }
   .note { padding:18px; border:1px solid var(--line); border-left:5px solid var(--accent); border-radius:12px; background:var(--card); }
   .note p { margin:0 0 10px; }
   .note p:last-child { margin:0; }
@@ -46,9 +47,9 @@
 </head>
 <body>
 <main>
-  <nav class="top" aria-label="Navigation">
+  <nav class="top" id="topNav" aria-label="Navigation">
     <a class="back" href="index.html" id="back">← Moka</a>
-    <div class="langs" id="langs" aria-label="Langue"></div>
+    <div class="langs" id="langs" role="group" aria-label="Langue"></div>
   </nav>
   <h1 id="title">Installer Moka</h1>
   <p class="intro" id="intro">Sept étapes illustrées pour installer Moka sur votre Mac.</p>
@@ -125,9 +126,21 @@ const T = {
   ]}
 };
 const flags = {fr:"🇫🇷",en:"🇺🇸",es:"🇪🇸",pt:"🇧🇷",nl:"🇳🇱",de:"🇩🇪",it:"🇮🇹"};
+const languageNames = {fr:"Français",en:"English",es:"Español",pt:"Português",nl:"Nederlands",de:"Deutsch",it:"Italiano"};
+const uiLabels = {
+  fr:{navigation:"Navigation",language:"Langue"},
+  en:{navigation:"Navigation",language:"Language"},
+  es:{navigation:"Navegación",language:"Idioma"},
+  pt:{navigation:"Navegação",language:"Idioma"},
+  nl:{navigation:"Navigatie",language:"Taal"},
+  de:{navigation:"Navigation",language:"Sprache"},
+  it:{navigation:"Navigazione",language:"Lingua"}
+};
 const nav = document.getElementById("langs");
 function setLang(l) {
   const t=T[l]; document.documentElement.lang=l; document.title=t.title+" — Moka";
+  document.getElementById("topNav").setAttribute("aria-label",uiLabels[l].navigation);
+  nav.setAttribute("aria-label",uiLabels[l].language);
   for (const id of ["title","intro","skip","update","variation"]) document.getElementById(id).textContent=t[id];
   document.getElementById("close").textContent=t.close;
   document.getElementById("zoom").setAttribute("aria-label",t.zoom);
@@ -141,15 +154,17 @@ function setLang(l) {
     content.append(number,heading,p);
     if (i===0) { const a=document.createElement("a"); a.className="download"; a.href=downloadURL; a.textContent=t.download; content.append(a); li.append(content); }
     else { const button=document.createElement("button"); button.type="button"; button.className="zoom-button"; button.setAttribute("aria-label",t.zoom+" : "+title);
-      const img=document.createElement("img"); img.src=illustration(i+1,l); img.alt=title; img.loading="lazy"; button.append(img);
-      button.addEventListener("click",()=>{ const large=document.getElementById("large"); large.src=img.src; large.alt=title; document.getElementById("zoom").showModal(); });
+      const img=document.createElement("img"); img.src=illustration(i+1,l); img.alt=""; img.loading="lazy";
+      const hint=document.createElement("span"); hint.className="zoom-hint"; hint.textContent=t.zoom;
+      button.append(img,hint);
+      button.addEventListener("click",()=>{ const large=document.getElementById("large"); large.src=img.src; large.alt=body; document.getElementById("zoom").showModal(); });
       li.append(button,content); }
     list.append(li);
   });
   nav.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===l));
   try { localStorage.setItem("lang",l); } catch(e) {}
 }
-Object.keys(T).forEach(l=>{ const b=document.createElement("button"); b.type="button"; b.textContent=flags[l]; b.dataset.l=l; b.title=l.toUpperCase(); b.setAttribute("aria-label",l.toUpperCase()); b.addEventListener("click",()=>setLang(l)); nav.append(b); });
+Object.keys(T).forEach(l=>{ const b=document.createElement("button"); b.type="button"; b.textContent=flags[l]; b.dataset.l=l; b.lang=l; b.title=languageNames[l]; b.setAttribute("aria-label",languageNames[l]); b.addEventListener("click",()=>setLang(l)); nav.append(b); });
 document.getElementById("close").addEventListener("click",()=>document.getElementById("zoom").close());
 document.getElementById("zoom").addEventListener("click",e=>{ if(e.target.id==="zoom") e.target.close(); });
 let language="en"; try { language=new URLSearchParams(location.search).get("lang") || localStorage.getItem("lang") || (navigator.language||"en").slice(0,2); } catch(e) {}
