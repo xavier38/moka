@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "build": 2026110517,
+  "platform": "linux",
+  "url": "https://github.com/xavier38/moka/releases/download/pc-v1.0.0/moka.deb",
+  "size": 514040,
+  "sha256": "2526b507954bab4ca0e8e05efed7ecd30e1ea437e2c613df0f808f0c9a851256",
+  "signature": "akH4ezuunFX8zw1/+JL6Y7OfzXoORqZUXqjsmpN3HQfJ1C+JMpGv3kutfHza9vUT7NIR/5jG//D8+fQ3+DqVBg==",
+  "notes": {
+    "fr": "Première version de Moka pour Windows et Linux : la tasse près de l'horloge garde l'ordinateur allumé d'un clic.",
+    "en": "First version of Moka for Windows and Linux: the cup near the clock keeps your computer awake in one click.",
+    "es": "Primera versión de Moka para Windows y Linux: la taza junto al reloj mantiene el ordenador encendido con un clic.",
+    "pt": "Primeira versão do Moka para Windows e Linux: a xícara perto do relógio mantém o computador acordado com um clique.",
+    "nl": "Eerste versie van Moka voor Windows en Linux: het kopje bij de klok houdt uw computer met één klik wakker.",
+    "de": "Erste Version von Moka für Windows und Linux: Die Tasse neben der Uhr hält Ihren Computer mit einem Klick wach.",
+    "it": "Prima versione di Moka per Windows e Linux: la tazza vicino all'orologio tiene acceso il computer con un clic."
+  },
+  "history": []
+}
